@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM  JS - Лр3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="site-title">DOM  JavaScript</h1>
+    <p class="site-sub">Лабораторна робота  Інтерактивні завдання</p>
+    <div id="clock" class="clock"></div>
+  </header>
+
+  <main class="grid">
+
+    <section class="card" id="card-font">
+      <h2 class="card-title">Розмір шрифту</h2>
+      <div class="card-body">
+        <input id="fontText" class="inp" type="text" value="Привіт, світ!" placeholder="Текст" />
+        <input id="fontSize" class="inp" type="number" value="24" min="8" max="120" placeholder="Розмір (px)" />
+        <button class="btn" onclick="showText()">Вивести</button>
+        <div id="fontOutput" class="output-box"></div>
+      </div>
+    </section>
+
+    <section class="card" id="card-img">
+      <h2 class="card-title">Рухома картинка</h2>
+      <div class="card-body img-arena" id="imgArena">
+        <img id="movingImg" alt="🤟" class="moving-img" />
+        <p class="hint">Картинка з'являється в новому місці щосекунди</p>
+      </div>
+    </section>
+
+    <section class="card" id="card-ptags">
+      <h2 class="card-title">Зміна розміру &lt;p&gt;</h2>
+      <div class="card-body" id="pContainer">
+        <p>Перший абзац - початковий розмір</p>
+        <p>Другий абзац - теж стандартний</p>
+        <p>Третій абзац - жде змін!</p>
+        <button class="btn" onclick="changePSize()">Встановити 15 px</button>
+        <span id="pMsg" class="badge"></span>
+      </div>
+    </section>
+
+    <section class="card" id="card-fade">
+      <h2 class="card-title">Поступове витирання</h2>
+      <div class="card-body">
+        <div id="fadeBlock" class="fade-block">
+          Цей блок поступово зникне після натискання кнопки.
+          Ефект досягається зміною opacity через таймер setInterval.
+        </div>
+        <div class="btn-row">
+          <button class="btn" onclick="startFade()">Витерти</button>
+          <button class="btn btn-sec" onclick="resetFade()">Скинути</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="card-tooltip">
+      <h2 class="card-title">Розумна підказка</h2>
+      <div class="card-body">
+        <p>Натисни кнопку - підказка сама визначить напрямок, щоб не вийти за межі екрана.</p>
+        <button class="btn" id="tooltipBtn" onclick="toggleTooltip(event)">
+          Показати підказку
+        </button>
+      </div>
+    </section>
+
+    <section class="card" id="card-colors">
+      <h2 class="card-title">Кольорові літери</h2>
+      <div class="card-body">
+        <input id="colorText" class="inp" type="text" value="JavaScript" />
+        <button class="btn" onclick="colorizeText()">Розфарбувати</button>
+        <div id="colorOutput" class="color-output"></div>
+      </div>
+    </section>
+
+    <section class="card" id="card-credit">
+      <h2 class="card-title">Іпотека</h2>
+      <div class="card-body">
+        <label>Сума (грн): <input id="credS" class="inp inp-sm" type="number" value="1000000" /></label>
+        <label>Ставка (%): <input id="credP" class="inp inp-sm" type="number" value="10" /></label>
+        <label>Років:      <input id="credY" class="inp inp-sm" type="number" value="5" /></label>
+        <button class="btn" onclick="calcCredit()">Розрахувати</button>
+        <div id="creditResult" class="result-box"></div>
+      </div>
+    </section>
+
+    <section class="card" id="card-mouse">
+      <h2 class="card-title">Миша та клавіатура</h2>
+      <div class="card-body tracker-box" id="trackerBox" tabindex="0">
+        <div id="mouseCoords"> X: — · Y: —</div>
+        <div id="keyCode"> Клавіша: —</div>
+        <p class="hint">Рухай мишею або натискай клавіші</p>
+      </div>
+    </section>
+
+    <section class="card" id="card-countdown">
+      <h2 class="card-title">Зворотній відлік</h2>
+      <div class="card-body">
+        <label>Секунд: <input id="cdSecs" class="inp inp-sm" type="number" value="60" min="1" /></label>
+        <div class="btn-row">
+          <button class="btn" onclick="startCountdown()">Старт</button>
+          <button class="btn btn-sec" onclick="stopCountdown()">Зупинити</button>
+        </div>
+        <div id="countdownDisplay" class="countdown-display">—</div>
+        <div id="closeNote" class="close-note hidden">
+           Вкладку буде закрито після завершення відліку.<br>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="card-nocopy">
+      <h2 class="card-title">Захист від копіювання</h2>
+      <div class="card-body">
+        <div class="no-copy" id="noCopyBlock"
+             oncontextmenu="return false"
+             onselectstart="return false"
+             oncopy="return false">
+           Цей текст захищений від виділення та копіювання.<br>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="tooltip" class="tooltip hidden">
+     Розумна підказка!<br>Сама вибираю напрямок спливання,<br>щоб не виходити за межі екрану.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
