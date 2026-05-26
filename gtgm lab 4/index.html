@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LR4 - Bootstrap 4 - Variant 12</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <h1>Нотатки фронтендера: Проєктування інтерфейсів</h1>
+
+  <p class="row-label">row 1 - 2 block</p>
+  <div class="row layout-row">
+    <div class="col-12 col-md-5 col-lg-6 mb-col">
+      <div class="blk blk-r1">
+        <strong>Шпаргалка:</strong> Використовуй Flexbox для одновимірних макетів (меню, списки).
+      </div>
+    </div>
+    <div class="col-12 col-md-5 col-lg-6 mb-col">
+      <div class="blk blk-r1">
+        <strong>Оптимізація:</strong> Завжди видаляй невикористовувані CSS-стилі перед релізом.
+      </div>
+    </div>
+  </div>
+
+  <p class="row-label">row 2 - outer  block + 2 inside</p>
+  <div class="row layout-row">
+    <div class="col-12 mb-col">
+      <div class="blk blk-r2-outer">
+        <span class="blk-r2-outer-label">Аналітика читання за місяць</span>
+        <div class="row nested-row">
+          <div class="col-12 col-md-5 mb-col d-none d-md-flex">
+            <div class="blk blk-r2-nested">
+              <strong>Тег місяця:</strong> #Адаптивність
+            </div>
+          </div>
+          <div class="col-12 col-md-5 mb-col">
+            <div class="blk blk-r2-nested">
+              <strong>Перегляди:</strong> 1,240 читачів
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="row-label">Row 3 - block 7 kol. + 2 blocks  2 kol.</p>
+  <div class="row layout-row">
+    <div class="col-12 col-md-7 mb-col">
+      <div class="blk blk-r3-main">
+        <h5><strong>Як мислити брейкпоїнтами</strong></h5>
+        <p>Сучасна адаптивність — це не підгонка під розміри екрана. Справжня гнучкість починається тоді, коли ти дозволяєш контенту самому визначати точки зламу. Якщо текст стає занадто вузьким — це і є твій брейкпоінт.</p>
+      </div>
+    </div>
+    
+    <div class="col-md-2 mb-col d-none d-md-block">
+      <div class="blk blk-r3-second">
+        <strong>Теги статті:</strong> #CSS, #WebDesign
+      </div>
+    </div>
+    
+    <div class="col-2 d-block d-md-none mb-col" aria-hidden="true"></div>
+    
+    <div class="col-10 col-md-2 offset-md-1 mb-col">
+      <div class="blk blk-r3-third">
+        <div class="d-md-none mb-2" style="border-bottom: 1px solid #ccc; padding-bottom: 5px;">
+          <strong>Теги:</strong> #CSS, #WebDesign
+        </div>
+        <strong>Інфо:</strong> Час: ~3 хв. Автор: max
+    </div>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+ body {
+  background: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  padding-left: 12px;
+  margin-bottom: 24px;
+}
+.blk:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    }
+
+.row-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.layout-row {
+  margin-bottom: 20px;
+}
+
+.blk {
+  border-radius: 6px;
+  padding: 16px 10px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+/* --- Row 1 - blue --- */
+.blk-r1 {
+  background: #dbeafe;
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+
+/* --- Row 2 outer --- */
+.blk-r2-outer {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #065f46;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 60px;
+  padding: 12px 14px 8px;
+}
+
+.blk-r2-outer-label {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* --- Row 2 inside --- */
+.blk-r2-nested {
+  background: #a7f3d0;
+  border-color: #059669;
+  color: #064e3b;
+  width: 100%;
+}
+
+/* --- Row 3 - block 7 cols --- */
+.blk-r3-main {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #78350f;
+}
+
+/* --- Row 3 - block 2 (2 cols) --- */
+.blk-r3-second {
+  background: #ffe4e6;
+  border-color: #f43f5e;
+  color: #881337;
+}
+
+/* --- Row 3 - block 3 (2 cols) --- */
+.blk-r3-third {
+  background: #ede9fe;
+  border-color: #8b5cf6;
+  color: #3b0764;
+}
+
+.nested-row {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.mb-col {
+  margin-bottom: 10px;
+}
+
+.nested-row
